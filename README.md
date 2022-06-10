@@ -105,11 +105,14 @@ npx husky add .husky/commit-msg 'npx --no commitlint --edit "$1"'
 
 _reference: [doc](https://typicode.github.io/husky/#/?id=automatic-recommended)_
 
-
 ---
+
 ## Miscellaneous
+
 ### IDE interactive rebase
+
 In order to rebase interactively in your IDE (e.g. VSCode), copy this in your terminal:
+
 ```
 git config --global core.editor "code --wait"
 ```
