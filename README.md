@@ -81,3 +81,26 @@ forge update lib/<dep>
 Whenever you install new libraries using Foundry, make sure to update your `remappings.txt`.
 
 Follow steps [here](https://book.getfoundry.sh/config/hardhat.html) to enable HardHat compatibility
+
+# Formatting
+
+## Why Husky
+
+Husky allows to manage git hooks and trigger actions when commiting, e.g. `npx prettier writte .`
+
+## Create a hook on commits
+
+```
+npx husky add .husky/pre-commit "npm test"
+git add .husky/pre-commit
+```
+
+_reference: [doc](https://typicode.github.io/husky/#/?id=create-a-hook)_
+
+Some specific package might need specific hooks:
+
+```
+npx husky add .husky/commit-msg 'npx --no commitlint --edit "$1"'
+```
+
+_reference: [doc](https://typicode.github.io/husky/#/?id=automatic-recommended)_
