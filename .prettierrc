@@ -1,4 +1,9 @@
 {
+    "semi": true,
+    "tabWidth": 4,
+    "printWidth": 80,
+    "singleQuote": true,
+    "trailingComma": "es5",
     "overrides": [
         {
             "files": "*.sol",
@@ -6,16 +11,6 @@
                 "useTabs": false,
                 "singleQuote": false,
                 "explicitTypes": "always"
-            }
-        },
-        {
-            "files": "*",
-            "options": {
-                "semi": true,
-                "tabWidth": 4,
-                "printWidth": 80,
-                "singleQuote": true,
-                "trailingComma": "es5"
             }
         }
     ]
