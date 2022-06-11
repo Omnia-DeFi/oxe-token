@@ -84,6 +84,44 @@ Follow steps [here](https://book.getfoundry.sh/config/hardhat.html) to enable Ha
 
 # Formatting
 
+## Solhint
+
+### Disable solhint on current line
+
+Disable completely solhint
+
+```
+// solhint-disable-next-line
+```
+
+Disable some solhint rules
+
+```
+// solhint-disable-next-line no-empty-blocks not-rely-on-time
+```
+
+### Disable solhint for a group of lines
+Disalbe completely solhint
+```
+/* solhint-disable */
+function transferTo(address to, uint amount) public {
+    require(tx.origin == owner);
+    to.call.value(amount)();
+}
+/* solhint-enable */
+```
+
+Disable some solhint rules
+
+```
+  /* solhint-disable avoid-tx-origin not-rely-on-time */
+  function transferTo(address to, uint amount) public {
+    require(tx.origin == owner);
+    to.call.value(amount)();
+  }
+  /* solhint-enable avoid-tx-origin not-rely-on-time */
+```
+
 ## Why Husky
 
 Husky allows to manage git hooks and trigger actions when commiting, e.g. `npx prettier writte .`
