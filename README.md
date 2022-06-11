@@ -101,7 +101,9 @@ Disable some solhint rules
 ```
 
 ### Disable solhint for a group of lines
+
 Disalbe completely solhint
+
 ```
 /* solhint-disable */
 function transferTo(address to, uint amount) public {
