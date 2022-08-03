@@ -31,11 +31,12 @@ you can run `foundryup`._
 2. Comes with a number of advanced testing methods: `Fuzz Testing & Differential Testing` _(incoming: Invariant Testing, Symbolic Execution & Mutation Testing)_
 3. Tests written **only** in **solidity**
 
-_Notes: If for a specific case/scenario needs to be written in JS/TS you will need to use HardHat (along side Foundry)_ 
+_Notes: If for a specific case/scenario needs to be written in JS/TS you will need to use HardHat (along side Foundry)_
 
 <br><br>
- 
+
 # Getting Started
+
 Update git submodules & install repo's forge libraries
 
 ```
@@ -56,24 +57,32 @@ forge test --gas-report
 ```
 
 # Internal audits
+
 For internal audits we will use tools like `Echidna, Etheno, Manticore, Slither & Rattle`. <br>
-We also need to check our code against well known vulnerabilities from [Not So Smart Contracts repository](https://github.com/trailofbits/not-so-smart-contracts) *(included in the image)*
+We also need to check our code against well known vulnerabilities from [Not So Smart Contracts repository](https://github.com/trailofbits/not-so-smart-contracts) _(included in the image)_
 
 ## Install and run the toolkit
+
 ```
-docker run -it -v ${PWD}:/share trailofbits/eth-security-toolbox 
+docker run -it -v ${PWD}:/share trailofbits/eth-security-toolbox
 ```
+
 You might need to change default `solc` version with:
+
 ```
 solc-select use 0.8.13
 ```
+
 File of the current folder will be in `/share` folder of the container. When running a command with slither it look like:
+
 ```
 slither /share/src/Token.sol --config-file /share/slither.config.json
 ```
 
 # Forge
+
 ## Commands
+
 Install libraries with Foundry which work with Hardhat
 
 ```
