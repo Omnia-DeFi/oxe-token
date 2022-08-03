@@ -1,3 +1,3 @@
-forge-std/=lib/forge-std/src/
-solmate/=lib/solmate/src/
-ds-test/=lib/forge-std/lib/ds-test/src/
+forge-std/=/share/lib/forge-std/src/
+solmate/=/share/lib/solmate/src/
+ds-test/=/share/lib/forge-std/lib/ds-test/src/
