@@ -52,7 +52,7 @@ To learn more about writing tests in Solidity for Foundry, reference Rari Capita
 # Run Tests
 
 ```
-forge test
+forge test --gas-report
 ```
 
 # Internal audits
