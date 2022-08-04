@@ -24,10 +24,10 @@ jobs:
                   failOnWarnings: true
 
     solhint:
-        name: runner / solhint
+        name: Solhint check
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v2
             - name: solhint
               uses: contractshark/inject-solhint-ci@latest
               with:
