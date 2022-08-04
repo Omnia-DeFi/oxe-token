@@ -1,3 +1,4 @@
 forge-std/=/share/lib/forge-std/src/
 solmate/=/share/lib/solmate/src/
 ds-test/=/share/lib/forge-std/lib/ds-test/src/
+openzeppelin-contracts/=/share/lib/openzeppelin-contracts/contracts/
