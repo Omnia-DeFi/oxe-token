@@ -28,9 +28,12 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
-            - name: solhint
-              uses: contractshark/inject-solhint-ci@latest
+            - name: Setup Node 16
+              uses: actions/setup-node@v3
               with:
-                  github_token: ${{ secrets.github_token }}
-                  reporter: github-pr-review
-                  solhint_input: 'contracts/*.sol'
+                  node-version: '16.x'
+                  cache: 'npm'
+            - name: Install Node dependencies
+              run: npm ci
+            - name: Solhint check
+              run: npx solhint src/*.sol
