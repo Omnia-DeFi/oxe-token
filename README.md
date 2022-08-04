@@ -40,8 +40,7 @@ _Notes: If for a specific case/scenario needs to be written in JS/TS you will ne
 Update git submodules & install repo's forge libraries
 
 ```
-git submodule update --init --recursive
-forge install
+yarn install & git submodule update --init --recursive && forge install
 ```
 
 ### Writing Tests with Foundry
@@ -53,8 +52,10 @@ To learn more about writing tests in Solidity for Foundry, reference Rari Capita
 # Run Tests
 
 ```
-forge test --gas-report
+forge test --gas-report --watch
 ```
+
+`watch` allows to trigger test on every change in test files
 
 # Internal audits
 
