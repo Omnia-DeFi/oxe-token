@@ -81,7 +81,30 @@ slither /share/src/Token.sol --config-file /share/slither.config.json
 
 # Forge
 
-## Commands
+## Deploy: local network via Anvil
+
+First, start Anvil:
+
+```
+anvil
+```
+
+Then run the following script with one of the private keys given to you by Anvil:
+
+```
+forge script scripts/Token.s.sol:DeployToken --fork-url http://localhost:8545 --private-key $PRIVATE_KEY --broadcast -vvvv
+```
+
+## Deploy: existing network
+
+Create an `.env` file based on `.env.example` & fill it with your data. Then run:
+
+```
+source .env
+forge script scripts/Token.s.sol:DeployToken --rpc-url $RPC_URL --private-key $PRIVATE_KEY --broadcast --verify --etherscan-api-key $EXPLORER_KEY -vvvv
+```
+
+## Other commands
 
 Install libraries with Foundry which work with Hardhat
 
