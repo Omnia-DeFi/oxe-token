@@ -7,17 +7,10 @@ jobs:
         name: Prettier check
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3
-            - name: Setup Node 16
-              uses: actions/setup-node@v3
+            - uses: actions/checkout@v2
+            - uses: actionsx/prettier@v2
               with:
-                  node-version: '16.x'
-                  cache: 'npm'
-            - name: Install Node dependencies
-              run: npm ci
-            - name: Run prettier
-              run: npx prettier --check .
-              id: prettier-check
+                  args: --check .
 
     commitlint:
         name: Commit-lint check
