@@ -1,4 +1,4 @@
-name: launch foundry test
+name: foundry actions
 
 on: [push, pull_request]
 
