@@ -12,6 +12,9 @@ contract TokenTest is Test {
         t = new Token();
     }
 
+    /*//////////////////////////////////////////////////////////////
+                                 BASIC ATTRIBUTES
+    //////////////////////////////////////////////////////////////*/
     function testName() public {
         assertEq(t.name(), "Token");
     }
