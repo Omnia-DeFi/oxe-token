@@ -7,7 +7,10 @@ import "../src/OXE.sol";
 
 contract OXETest is Test {
     OXE oxe;
-    address owner = msg.sender;
+
+    string public SEED = vm.envString("SEED");
+    uint256 public privateKey = vm.deriveKey(SEED, 0);
+    address public owner = msg.sender;
 
     function setUp() public {
         oxe = new OXE(owner);
