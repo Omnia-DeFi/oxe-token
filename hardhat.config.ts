@@ -3,8 +3,13 @@ import '@nomiclabs/hardhat-waffle';
 import '@typechain/hardhat';
 import 'hardhat-preprocessor';
 import { HardhatUserConfig, task } from 'hardhat/config';
+import '@nomiclabs/hardhat-etherscan';
 
-import example from './tasks/example';
+// use .env vars
+import * as dotenv from 'dotenv';
+dotenv.config();
+
+// import example from './tasks/example';
 
 function getRemappings() {
     return fs
@@ -14,9 +19,20 @@ function getRemappings() {
         .map((line) => line.trim().split('='));
 }
 
-task('example', 'Example task').setAction(example);
+// task('example', 'Example task').setAction(example);
 
 const config: HardhatUserConfig = {
+    networks: {
+        goerli: {
+            url: process.env.GOERLI_RPC_URL,
+            accounts: {
+                mnemonic: process.env.SEED,
+            },
+        },
+    },
+    etherscan: {
+        apiKey: process.env.ETHERSCAN_API_KEY,
+    },
     solidity: {
         version: '0.8.13',
         settings: {
