@@ -9,6 +9,6 @@ contract OXE is ERC20Permit {
         ERC20("Omnia Exchange Token", "OXE")
         ERC20Permit("Omnia DeFi")
     {
-        _mint(owner, 10 * 10**6);
+        _mint(owner, 10 * 10**6 * 1 ether);
     }
 }

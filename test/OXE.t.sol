@@ -28,12 +28,12 @@ contract OXETest is Test {
     }
 
     function testTotalSupply() public {
-        assertEq(oxe.totalSupply(), 10 * 10**6);
-        assertEq(oxe.totalSupply(), 10**7);
-        assertEq(oxe.totalSupply(), 10000000);
+        assertEq(oxe.totalSupply(), 10 * 10**6 * 1 ether);
+        assertEq(oxe.totalSupply(), 10**7 * 1 ether);
+        assertEq(oxe.totalSupply(), 10000000 * 1 ether);
     }
 
     function testBalanceOfOwner() public {
-        assertEq(oxe.balanceOf(owner), 10 * 10**6);
+        assertEq(oxe.balanceOf(owner), 10 * 10**6 * 1 ether);
     }
 }
