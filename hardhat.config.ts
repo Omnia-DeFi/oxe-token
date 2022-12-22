@@ -29,6 +29,18 @@ const config: HardhatUserConfig = {
                 mnemonic: process.env.SEED,
             },
         },
+        bsc: {
+            url: 'https://bsc-dataseed.binance.org',
+            accounts: {
+                mnemonic: process.env.SEED,
+            },
+        },
+        bscTest: {
+            url: 'https://data-seed-prebsc-1-s1.binance.org:8545',
+            accounts: {
+                mnemonic: process.env.SEED,
+            },
+        },
     },
     etherscan: {
         apiKey: process.env.ETHERSCAN_API_KEY,
