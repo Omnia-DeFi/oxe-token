@@ -2,7 +2,7 @@ const hre = require('hardhat');
 
 // npx hardhat run --network goerli scripts/deploy.js
 async function main() {
-    const oweOwner = '0xd82a0022ad5b6c239b4750971e66a563114faebb';
+    const oweOwner = '0x809e995d0F57B7d5E57CAA65a21b889689D06F77';
 
     const Oxe = await hre.ethers.getContractFactory('OXE');
     const oxe = await Oxe.deploy(oweOwner);

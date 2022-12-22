@@ -5,7 +5,7 @@ import "forge-std/Script.sol";
 import "../src/OXE.sol";
 
 contract DeployOXE is Script {
-    address constant oxeOwner = 0xD82A0022AD5b6c239b4750971e66A563114FAEbB;
+    address constant oxeOwner = 0x809e995d0F57B7d5E57CAA65a21b889689D06F77;
 
     function run() external {
         string memory SEED = vm.envString("SEED");

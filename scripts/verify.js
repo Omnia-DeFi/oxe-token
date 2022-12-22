@@ -2,10 +2,10 @@ const hre = require('hardhat');
 
 // npx hardhat run --network alfajores scripts/verify.js
 async function main() {
-    const oweOwner = '0xd82a0022ad5b6c239b4750971e66a563114faebb';
+    const oweOwner = '0x809e995d0F57B7d5E57CAA65a21b889689D06F77';
 
     await hre.run('verify:verify', {
-        address: '0x7A1fe0926Fa74ee34202c8F4fcb6fed35d858CaC',
+        address: '0x7D2C52dCd9eAC2394E32B2c7f7a5cbC26c4bB82b',
         constructorArguments: [oweOwner],
     });
 }
