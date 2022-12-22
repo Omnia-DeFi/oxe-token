@@ -3,6 +3,8 @@
 Merging 2 repos: [foundry-rs/hardhat-foundry-template](https://github.com/foundry-rs/hardhat-foundry-template) + [abigger87/femplate](https://github.com/abigger87/femplate)
 
 <br>
+## Deployed Contracts
+- Goerli: 0x5c47DfBe45Dd95a161F620964926D1D728efb974, 0x7A1fe0926Fa74ee34202c8F4fcb6fed35d858CaC
 
 ## First time with Forge/Foundry?
 
